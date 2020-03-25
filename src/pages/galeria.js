@@ -24,35 +24,39 @@ const GlobalStyles = createGlobalStyle`
 const Gallery = props => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
-  console.log(data.allMdx.edges)
-  const galleryPics = data.allMdx.edges
+  console.log(data)
+  const galleryPics = data.allMdx.nodes
 
   const renderGallery = galleryPics => {
     return galleryPics.map(image => (
-      <ImageDiv  backgroundImg={image.node.frontmatter.Image} />
+      <ImageDiv backgroundImg={image.frontmatter.Image} />
     ))
   }
 
   return (
     <Layout location={props.location} title={siteTitle}>
       <GlobalStyles />
+      <Title>Galeria</Title>
       <GalleryDiv>{renderGallery(galleryPics)}</GalleryDiv>
     </Layout>
   )
 }
 
 const GalleryDiv = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3rem;
 `
 
 const ImageDiv = styled.div`
-    width: 15rem;
-    height: 15rem;
-    border: 1px solid black;
-    cursor: pointer;
+  width: 20rem;
+  height: 15rem;
+  border: 1px solid black;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
   background-image: url(${props => props.backgroundImg});
   background-position: center center;
   background-repeat: no-repeat;
@@ -64,8 +68,15 @@ const ImageDiv = styled.div`
     transition: 1s;
   }
 `
-export default Gallery;
 
+
+export const Title = styled.h1`
+    font-family: MonteserratB;
+    text-align: center;
+    padding: 1rem;
+`
+
+export default Gallery
 
 export const pageQuery = graphql`
   query {
@@ -74,18 +85,12 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            description
-            Image
-          }
+    allMdx {
+      nodes {
+        frontmatter {
+          Image
+          description
+          title
         }
       }
     }

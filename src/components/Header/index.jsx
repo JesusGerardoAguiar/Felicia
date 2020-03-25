@@ -25,7 +25,7 @@ const Header = () => {
         <h1>Felicia</h1>
       </ImageDiv>
       <DivOptions>
-        <LinkDiv>Inicio</LinkDiv>
+        <LinkDiv><Link to='/'>Inicio</Link></LinkDiv>
         <LinkDiv><Link to='/galeria'>Galeria</Link></LinkDiv>
         <LinkDiv>Sobre Nosotros</LinkDiv>
         <LinkDiv>Actividades</LinkDiv>
