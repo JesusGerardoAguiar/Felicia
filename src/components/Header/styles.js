@@ -7,7 +7,7 @@ export const MainDiv = styled.nav`
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #f3b52a;
+  background-color: #5a8a17;
   position: inherit;
   font-family: "MontserratL";
   color: white;
@@ -24,6 +24,11 @@ export const ImageDiv = styled.div`
   width: 20rem;
   display: flex;
   justify-content: center;
+
+  h1{
+    margin-top: 0px;
+    letter-spacing: 9px;
+  }
 
   @media (max-width: 768px) {
     width: 10rem;
@@ -49,8 +54,9 @@ export const LinkDiv = styled.div`
   margin: 3rem;
   
   a {
-    text-decoration: none;
-    color: white;
+    text-decoration: none!important;
+    color: white!important;
+    box-shadow: none;
   }
 
   @media (max-width: 768px) {

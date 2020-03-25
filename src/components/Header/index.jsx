@@ -12,22 +12,24 @@ import Lograf from "../../../content/assets/lografLogo.svg";
 // import Drawer from "@material-ui/core/Drawer";
 // import { makeStyles, useTheme } from "@material-ui/core/styles";
 // import IconButton from "@material-ui/core/IconButton";
-import {  Link } from "react-router-dom";
 // import Hamburguer from '../../assets/img/hamburguer.png';
 // import Close from '../../assets/img/close.png';
+import { Link } from "gatsby"
+
 
 
 const Header = () => {
   return (
     <MainDiv>
       <ImageDiv>
-        <img src={Lograf} alt="logo" style={{ width: "10rem" }} />
+        <h1>Felicia</h1>
       </ImageDiv>
       <DivOptions>
         <LinkDiv>Inicio</LinkDiv>
-        <LinkDiv>Proyectos</LinkDiv>
+        <LinkDiv><Link to='/galeria'>Galeria</Link></LinkDiv>
         <LinkDiv>Sobre Nosotros</LinkDiv>
-        <LinkDiv>Packs</LinkDiv>
+        <LinkDiv>Actividades</LinkDiv>
+        <LinkDiv>Servicios</LinkDiv>
         {/* <a href="https://www.facebook.com/lograf.dg" target="_blank">
           <LinkImg>
             <Facebook fill="white" style={{ width: 13.5 }} />

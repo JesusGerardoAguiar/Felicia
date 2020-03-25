@@ -27,7 +27,7 @@ class Layout extends React.Component {
 
 const Wrapper = styled.div`
   min-height: 100vh;
-
+  
   p {
     font-family: MonteserratR;
   }
