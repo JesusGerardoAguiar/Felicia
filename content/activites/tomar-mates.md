@@ -1,7 +1,7 @@
 ---
 path: mates
-title: Tomar mates
-description: Tomamos mates hoy por la tarde
+activityTitle: tomar mates
+activityDescription: tomando mates with the boys
 activityImages:
   - /assets/5ada2c32b1bdf.jpeg
   - /assets/aai02zn.jpeg
