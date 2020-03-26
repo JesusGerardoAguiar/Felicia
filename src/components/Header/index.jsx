@@ -26,9 +26,9 @@ const Header = () => {
       </ImageDiv>
       <DivOptions>
         <LinkDiv><Link to='/'>Inicio</Link></LinkDiv>
-        <LinkDiv><Link to='/galeria'>Galeria</Link></LinkDiv>
         <LinkDiv>Sobre Nosotros</LinkDiv>
-        <LinkDiv>Actividades</LinkDiv>
+        <LinkDiv><Link to='/actividades'>Actividades</Link></LinkDiv>
+        <LinkDiv><Link to='/galeria'>Galeria</Link></LinkDiv>
         <LinkDiv>Servicios</LinkDiv>
         {/* <a href="https://www.facebook.com/lograf.dg" target="_blank">
           <LinkImg>

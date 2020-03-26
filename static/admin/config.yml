@@ -15,3 +15,12 @@ collections:
       - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: Image, label: Imagen, widget: image }
+  - name: Actividades
+    label: Actividad
+    folder: content/activites
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: title, label: Title }
+      - { name: description, label: Description }
+      - { name: activityImages, label: Images, widget: list,  field: {label: Image, name: image, widget: image} }
