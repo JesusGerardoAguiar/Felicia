@@ -21,6 +21,6 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: title, label: Title }
-      - { name: description, label: Description }
+      - { name: activityTitle, label: Title }
+      - { name: activityDescription, label: Description }
       - { name: activityImages, label: Images, widget: list,  field: {label: Image, name: image, widget: image} }

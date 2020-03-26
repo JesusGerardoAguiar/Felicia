@@ -22,10 +22,16 @@ const GlobalStyles = createGlobalStyle`
 const Actividades = props => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
+  const activities = data.allMdx.nodes;
 
-  const renderGallery = galleryPics => {
-    return galleryPics.map(image => (
-      <ImageDiv backgroundImg={image.frontmatter.Image} />
+  const renderActivities = activities => {
+    return activities.map(activity => (
+      <div>
+        <h1>{activity.frontmatter.activityTitle}</h1>
+        <h2>{activity.frontmatter.activityDescription}</h2>
+
+      </div>
+      // <ImageDiv backgroundImg={image.frontmatter.Image} />
     ))
   }
 
@@ -33,16 +39,19 @@ const Actividades = props => {
     <Layout location={props.location} title={siteTitle}>
       <GlobalStyles />
       <Title>Actividades</Title>
-      {/* <GalleryDiv>{renderGallery(galleryPics)}</GalleryDiv> */}
+      <ActivitiesDiv>{renderActivities(activities)}</ActivitiesDiv>
     </Layout>
   )
 }
 
-const GalleryDiv = styled.div`
+const ActivitiesDiv = styled.div`
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: 10rem;
   flex-wrap: wrap;
-  padding: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 `
 
 const ImageDiv = styled.div`
@@ -79,6 +88,15 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allMdx {
+      nodes {
+        frontmatter {
+          activityDescription
+          activityTitle
+          activityImages
+        }
       }
     }
   }
