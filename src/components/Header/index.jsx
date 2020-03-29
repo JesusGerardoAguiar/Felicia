@@ -25,7 +25,7 @@ const Header = () => {
               display: "flex",
               flexDirection: "row",
               justifyContent: "center",
-              marginLeft: "8rem",
+              marginLeft: "11.555555rem",
             }}
           >
             <Link>Inicio</Link>

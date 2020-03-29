@@ -16,7 +16,7 @@ export const LinkDiv = styled.div`
     text-decoration: none !important;
     color: #A1AA79 !important;
     box-shadow: none;
-    margin-right: 1rem;
+    margin-right: 4rem;
     text-transform: uppercase;
   }
 
@@ -47,10 +47,10 @@ export const LinksContainerDiv = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 5px solid #F4E1C1;
+  border: 3px solid #F4E1C1;
   border-right: none;
   border-left: none;
-  
+  border-bottom: none;
   align-items: center;
 `
 
