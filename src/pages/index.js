@@ -17,6 +17,14 @@ const GlobalStyles = createGlobalStyle`
     font-family: MonteserratB;
     src: url(${require("../../content/assets/fonts/Montserrat-Bold.otf")});
   }
+  @font-face {
+    font-family: QuicksandR;
+    src: url(${require("../../content/assets/fonts/Quicksand-Regular.ttf")});
+  }
+  @font-face {
+    font-family: ArconRoundedR;
+    src: url(${require("../../content/assets/fonts/Arcon-Rounded-Regular.otf")});
+  }
 `
 
 class Blog extends React.Component {

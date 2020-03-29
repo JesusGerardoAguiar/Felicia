@@ -1,51 +1,47 @@
-import React from "react";
+import React from "react"
 import {
   MainDiv,
-  DivOptions,
+  LogoDiv,
+  LinksContainerDiv,
   LinkDiv,
-  ImageDiv,
-} from "./styles";
-import Lograf from "../../../content/assets/lografLogo.svg";
-// import Facebook from "../../assets/img/facebook.js";
-// import Instagram from "../../assets/img/instagram.js";
-// import { isMobile } from "react-device-detect";
-// import Drawer from "@material-ui/core/Drawer";
-// import { makeStyles, useTheme } from "@material-ui/core/styles";
-// import IconButton from "@material-ui/core/IconButton";
-// import Hamburguer from '../../assets/img/hamburguer.png';
-// import Close from '../../assets/img/close.png';
+  IconCircule,
+  IconDiv,
+} from "./styles"
+import FeliciaLogo from "../../../content/assets/icons/feliciaarriba.svg"
+import Facebook from "../../../content/assets/icons/facebook.svg"
+import Instagram from "../../../content/assets/icons/instagram.svg"
 import { Link } from "gatsby"
-
-
 
 const Header = () => {
   return (
     <MainDiv>
-      <ImageDiv>
-        <h1>Felicia</h1>
-      </ImageDiv>
-      <DivOptions>
-        <LinkDiv><Link to='/'>Inicio</Link></LinkDiv>
-        <LinkDiv>Sobre Nosotros</LinkDiv>
-        <LinkDiv><Link to='/actividades'>Actividades</Link></LinkDiv>
-        <LinkDiv><Link to='/galeria'>Galeria</Link></LinkDiv>
-        <LinkDiv>Servicios</LinkDiv>
-        {/* <a href="https://www.facebook.com/lograf.dg" target="_blank">
-          <LinkImg>
-            <Facebook fill="white" style={{ width: 13.5 }} />
-          </LinkImg>
-        </a>
-        <a href="https://www.instagram.com/lograf.design/" target="_blank">
-          <LinkImg>
-            <Instagram
-              fill="white"
-              style={{ width: 30.5, marginRight: "3rem" }}
-            />
-          </LinkImg>
-        </a> */}
-      </DivOptions>
+      <LogoDiv>
+        <img src={FeliciaLogo} style={{ margin: "12px" }} />
+      </LogoDiv>
+      <LinksContainerDiv>
+        <LinkDiv>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              marginLeft: "8rem",
+            }}
+          >
+            <Link>Inicio</Link>
+            <Link>Nosotros</Link>
+            <Link>Servicios</Link>
+            <Link>Actividades</Link>
+            <Link>Galeria</Link>
+          </div>
+        </LinkDiv>
+        <IconDiv>
+          <img src={Facebook} style={{ width: "2rem", marginBottom: 0, cursor: 'pointer' }} />
+          <img src={Instagram} style={{ width: "2rem", marginBottom: 0, cursor: 'pointer' }} />
+        </IconDiv>
+      </LinksContainerDiv>
     </MainDiv>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
