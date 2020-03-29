@@ -5,9 +5,11 @@ import FeliciaLogo from "../../content/assets/icons/feliciablanco.svg"
 import Layout from "../components/layout"
 import TextContainer from "../components/TextContainer"
 import Values from '../components/Values';
+import Services from '../components/Services';
 import { createGlobalStyle } from "styled-components"
 import ImagenNosotros1 from "../../content/assets/img/imagenesredondas-01.png"
 import ImagenNosotros6 from "../../content/assets/img/imagenesredondas-06.png"
+import ImagenesRedondas5 from "../../content/assets/img/imagenesredondas-05.png"
 
 
 const GlobalStyles = createGlobalStyle`
@@ -40,6 +42,12 @@ const arrayListFacilities = [
 
 ]
 
+const arrayListStay = [
+  "Estadía Permanente: El residente se aloja por un período de tiempo determinado por diferentes motivos (estado post - operatorio, rehabilitación, convalecencia).",
+  "Estadía Diurna: El residente concurre a la residencia sin alojamiento nocturno, con el fin de participar de los diferentes servicios que se brindan durante el día.",
+  "Estadía Temporaria: El residente se aloja por un periodo determinado por vacaciones propias o de sus familiares, o por otras circunstancias. Los residentes pueden contar con plena autonomía o con necesidades de asistencia."
+]
+
 class Blog extends React.Component {
   render() {
     return (
@@ -67,6 +75,17 @@ class Blog extends React.Component {
             img={ImagenNosotros6}
             title={"Instalaciones"}
             list={arrayListFacilities}
+          />
+        </div>
+        <div id="Services">
+          <Services />
+        </div>
+        <div id="Stay">
+        <TextContainer
+            img={ImagenesRedondas5}
+            title={"Instalaciones"}
+            list={arrayListStay}
+            texts={["Al ingreso, nuestro equipo médico efectúa una entrevista donde se relevan las necesidades y preferencias del futuro residente, para determinar su perfil particular. En base a dicho perfil, se diseña una experiencia única y personalizada que combina el tipo de estadía con los servicios ofrecidos por nuestra residencia."]}
           />
         </div>
       </Layout>

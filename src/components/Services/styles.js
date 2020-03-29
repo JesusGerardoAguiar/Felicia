@@ -7,7 +7,6 @@ export const MainDiv = styled.div`
   text-align: center;
   flex-wrap: wrap;
   width: 100%;
-  height: 35rem;
 
   h1 {
     font-family: "ArconRoundedR";
@@ -22,14 +21,14 @@ export const ValuesDiv = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   width: 100%;
   align-items: baseline;
-  padding-left: 5rem;
-  padding-right: 5rem;
   h3, p{
-    text-align: center;
+    text-align: start;
     font-family: "QuicksandR";
     margin: 0;
+    margin-left: 3rem;
   }
   h3{
     color: #977867;
@@ -37,16 +36,27 @@ export const ValuesDiv = styled.div`
   p{
     color: black;
     margin: 0;
+    margin-left: 3rem;
     margin-top: 0.2rem;
-    width: 12rem;
+    width: 25rem;
     line-height: 22px;
   }
 `
 
 export const ValuesBox = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  width: 30rem;
+
+
 `
+
+export const TextDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+
 
