@@ -77,144 +77,96 @@ const useStyles = makeStyles(theme => ({
 const Header = ({ isMobile }) => {
   const [open, setOpen] = useState(false)
   const classes = useStyles()
-  if (false) {
-    return (
-      <div>
-        <MainDiv>
-          <div onClick={() => setOpen(true)}>open</div>
 
-          <img src={FeliciaLogo} alt="logo" style={{ width: "10rem" }} />
+  const renderHeader = matches => {
+    if (matches.small) {
+      return (
+        <div>
+          <MainDiv>
+            <div onClick={() => setOpen(true)}>open</div>
+
+            <img src={FeliciaLogo} alt="logo" style={{ width: "10rem" }} />
+          </MainDiv>
+          <Drawer
+            className={classes.drawer}
+            variant="persistent"
+            anchor="left"
+            open={open}
+            onClose={() => setOpen(false)}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+          >
+            <div className={classes.drawerHeader}>
+              <IconButton onClick={() => setOpen(false)}>
+                <div>close</div>
+              </IconButton>
+            </div>
+            <LinkDiv onClick={() => setOpen(false)}>
+              <Link>Inicio</Link>
+            </LinkDiv>
+            <LinkDiv onClick={() => setOpen(false)}>
+              <Link>Nosotros</Link>
+            </LinkDiv>
+            <LinkDiv onClick={() => setOpen(false)}>
+              <Link>Servicios</Link>
+            </LinkDiv>
+            <LinkDiv onClick={() => setOpen(false)}>
+              <Link>Actividades</Link>
+            </LinkDiv>
+            <LinkDiv onClick={() => setOpen(false)}>
+              <Link>Galeria</Link>
+            </LinkDiv>
+            <IconDiv>
+              <img
+                src={Facebook}
+                style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
+              />
+              <img
+                src={Instagram}
+                style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
+              />
+            </IconDiv>
+          </Drawer>
+        </div>
+      )
+    } else if (matches.large) {
+      return (
+        <MainDiv>
+          <LogoDiv>
+            <img src={FeliciaLogo} style={{ margin: "12px" }} />
+          </LogoDiv>
+          <LinksContainerDiv>
+            <LinkDiv>
+              <InsideLinkDiv>
+                <Link>Inicio</Link>
+                <Link>Nosotros</Link>
+                <Link>Servicios</Link>
+                <Link>Actividades</Link>
+                <Link>Galeria</Link>
+              </InsideLinkDiv>
+            </LinkDiv>
+            <IconDiv>
+              <img
+                src={Facebook}
+                style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
+              />
+              <img
+                src={Instagram}
+                style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
+              />
+            </IconDiv>
+          </LinksContainerDiv>
         </MainDiv>
-        <Drawer
-          className={classes.drawer}
-          variant="persistent"
-          anchor="left"
-          open={open}
-          onClose={() => setOpen(false)}
-          classes={{
-            paper: classes.drawerPaper,
-          }}
-        >
-          <div className={classes.drawerHeader}>
-            <IconButton onClick={() => setOpen(false)}>
-              <div>close</div>
-            </IconButton>
-          </div>
-          <LinkDiv onClick={() => setOpen(false)}>
-            <Link>Inicio</Link>
-          </LinkDiv>
-          <LinkDiv onClick={() => setOpen(false)}>
-            <Link>Nosotros</Link>
-          </LinkDiv>
-          <LinkDiv onClick={() => setOpen(false)}>
-            <Link>Servicios</Link>
-          </LinkDiv>
-          <LinkDiv onClick={() => setOpen(false)}>
-            <Link>Actividades</Link>
-          </LinkDiv>
-          <LinkDiv onClick={() => setOpen(false)}>
-            <Link>Galeria</Link>
-          </LinkDiv>
-          <IconDiv>
-            <img
-              src={Facebook}
-              style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
-            />
-            <img
-              src={Instagram}
-              style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
-            />
-          </IconDiv>
-        </Drawer>
-      </div>
-    )
+      )
+    }
   }
+
   return (
     <>
-      <Media
-        query="(max-width: 768px)"
-        render={() => (
-          <div>
-            <MainDiv>
-              <div onClick={() => setOpen(true)}>open</div>
-
-              <img src={FeliciaLogo} alt="logo" style={{ width: "10rem" }} />
-            </MainDiv>
-            <Drawer
-              className={classes.drawer}
-              variant="persistent"
-              anchor="left"
-              open={open}
-              onClose={() => setOpen(false)}
-              classes={{
-                paper: classes.drawerPaper,
-              }}
-            >
-              <div className={classes.drawerHeader}>
-                <IconButton onClick={() => setOpen(false)}>
-                  <div>close</div>
-                </IconButton>
-              </div>
-              <LinkDiv onClick={() => setOpen(false)}>
-                <Link>Inicio</Link>
-              </LinkDiv>
-              <LinkDiv onClick={() => setOpen(false)}>
-                <Link>Nosotros</Link>
-              </LinkDiv>
-              <LinkDiv onClick={() => setOpen(false)}>
-                <Link>Servicios</Link>
-              </LinkDiv>
-              <LinkDiv onClick={() => setOpen(false)}>
-                <Link>Actividades</Link>
-              </LinkDiv>
-              <LinkDiv onClick={() => setOpen(false)}>
-                <Link>Galeria</Link>
-              </LinkDiv>
-              <IconDiv>
-                <img
-                  src={Facebook}
-                  style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
-                />
-                <img
-                  src={Instagram}
-                  style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
-                />
-              </IconDiv>
-            </Drawer>
-          </div>
-        )}
-      />
-      <Media
-        query="(min-width: 769px)"
-        render={() => (
-          <MainDiv>
-            <LogoDiv>
-              <img src={FeliciaLogo} style={{ margin: "12px" }} />
-            </LogoDiv>
-            <LinksContainerDiv>
-              <LinkDiv>
-                <InsideLinkDiv>
-                  <Link>Inicio</Link>
-                  <Link>Nosotros</Link>
-                  <Link>Servicios</Link>
-                  <Link>Actividades</Link>
-                  <Link>Galeria</Link>
-                </InsideLinkDiv>
-              </LinkDiv>
-              <IconDiv>
-                <img
-                  src={Facebook}
-                  style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
-                />
-                <img
-                  src={Instagram}
-                  style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
-                />
-              </IconDiv>
-            </LinksContainerDiv>
-          </MainDiv>
-        )}
-      />
+      <Media queries={{ small: { maxWidth: 768 }, large: { minWidth: 769 } }}>
+        {matches => renderHeader(matches)}
+      </Media>
     </>
   )
 }
