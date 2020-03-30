@@ -116,6 +116,15 @@ const BannerDiv = styled.div`
 
   @media (max-width: 768px) {
     background-size: cover;
+
+    height: 20rem;
+    img{
+      width: 10rem!important;
+      margin-bottom: 10px!important;
+        }
+    h1{
+      font-size: 20px
+    }
    }
 `
 

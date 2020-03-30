@@ -32,17 +32,33 @@ export const TextDiv = styled.div`
     font-family: "ArconRoundedR";
     color: #977867;
     text-transform: uppercase;
+    @media (max-width: 768px) {
+      text-align: center;
+      margin-top:0px;
+    }
   }
   p {
     text-align: justify;
     font-family: "QuicksandR";
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 13px;
+      margin-top:0px;
+    }
   }
   ul {
     list-style: none;
+    @media (max-width: 768px) {
+      text-align: center;
+      margin: 0;
+      font-size: 13px;
+      margin-top:0px;
+    }
   }
   @media (max-width: 768px) {
     padding-bottom: 0px;
-    padding: 1rem;
+    padding: 0px;
+    margin: 2rem;
   }
 `
 

@@ -35,6 +35,7 @@ export const ValuesDiv = styled.div`
     @media (max-width: 768px) {
       margin-left: 0px;
       text-align: center;
+      margin-top:0px;
     }
   }
   p{
@@ -46,10 +47,17 @@ export const ValuesDiv = styled.div`
     line-height: 22px;
 
     @media (max-width: 768px) {
+      padding: 2rem;
       width: fit-content;
       margin-left: 0px;
       text-align: center;
+      font-size: 13px;
+      
     }
+  }
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  margin-bottom: 0px;
   }
 `
 

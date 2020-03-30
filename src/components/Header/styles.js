@@ -37,7 +37,7 @@ export const LinkDiv = styled.div`
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
-
+    width: 100%;
     a {
       text-decoration: none;
       color: #a1aa79;
@@ -77,6 +77,14 @@ export const MainDiv = styled.nav`
   @media (max-width: 768px) {
     padding-right: 1rem;
     padding-left: 1rem;
+    flex-direction: row;
+    img {
+      margin-bottom: 0px;
+      width: 3rem!important;
+    }
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
   }
 `
 
@@ -132,4 +140,14 @@ export const IconDiv = styled.div`
   flex-direction: row;
   width: 5rem;
   justify-content: space-evenly;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+    img{
+      margin-right: 1rem;
+      
+    }
+  }
 `

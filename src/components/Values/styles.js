@@ -12,6 +12,9 @@ export const MainDiv = styled.div`
     font-family: "ArconRoundedR";
     color: #977867;
     text-transform: uppercase;
+    @media (max-width: 768px) {
+      margin-top:0px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -33,9 +36,13 @@ export const ValuesDiv = styled.div`
     text-align: center;
     font-family: "QuicksandR";
     margin: 0;
+    
   }
   h3{
     color: #977867;
+    @media (max-width: 768px) {
+      margin-top:0px;
+    }
   }
   p{
     color: black;
@@ -43,6 +50,7 @@ export const ValuesDiv = styled.div`
     margin-top: 0.2rem;
     width: 12rem;
     line-height: 22px;
+    font-size: 13px;
   }
 
   `

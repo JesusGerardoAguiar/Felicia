@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.8",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
     "babel-plugin-styled-components": "^1.10.0",
@@ -32,6 +33,7 @@
     "gatsby-transformer-sharp": "^2.1.18",
     "netlify-cms-app": "^2.9.1",
     "react": "^16.8.6",
+    "react-device-detect": "^1.11.14",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-switch": "^5.0.0",
