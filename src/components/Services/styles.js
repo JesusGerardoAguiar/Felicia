@@ -43,7 +43,7 @@ export const ValuesDiv = styled.div`
     margin: 0;
     margin-left: 3rem;
     margin-top: 0.2rem;
-    width: 25rem;
+    width: fit-content;
     line-height: 22px;
 
     @media (max-width: 768px) {
@@ -67,10 +67,11 @@ export const ValuesBox = styled.div`
   justify-content: space-between;
   align-items: end;
   width: 30rem;
-  flex-wrap: wrap;
   @media (max-width: 768px) {
     justify-content: center;
     margin-bottom: 1rem;
+  flex-wrap: wrap;
+
   }
 
 `

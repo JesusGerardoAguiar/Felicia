@@ -80,7 +80,7 @@ const useStyles = makeStyles(theme => ({
 const Header = () => {
   const [open, setOpen] = useState(false)
   const classes = useStyles()
-  if (isMobile) {
+  if (window.innerWidth <= 760) {
     return (
       <div>
         <MainDiv>
