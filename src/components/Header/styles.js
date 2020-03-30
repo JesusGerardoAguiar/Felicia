@@ -28,7 +28,7 @@ export const LinkDiv = styled.div`
     text-decoration: none !important;
     color: #a1aa79 !important;
     box-shadow: none;
-    width: 100%;
+    margin-right: 4rem;
     text-transform: uppercase;
   }
 
@@ -39,6 +39,8 @@ export const LinkDiv = styled.div`
     font-size: 20px;
     width: 100%;
     a {
+    width: 100%;
+margin-right: 0px;
       text-decoration: none;
       color: #a1aa79;
     }

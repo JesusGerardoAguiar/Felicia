@@ -97,8 +97,8 @@ const BannerDiv = styled.div`
   background-image: url(${props => props.backgroundImg});
   background-position: center center;
   background-repeat: no-repeat;
-  height: 37.555555555rem;
-  background-size: contain;
+  height: 40rem;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;

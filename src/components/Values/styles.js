@@ -7,7 +7,7 @@ export const MainDiv = styled.div`
   text-align: center;
   flex-wrap: wrap;
   width: 100%;
-  height: 35rem;
+  height: fit-content;
   h1 {
     font-family: "ArconRoundedR";
     color: #977867;

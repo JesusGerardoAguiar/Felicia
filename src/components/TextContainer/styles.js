@@ -2,16 +2,17 @@ import styled from "styled-components"
 
 export const MainDiv = styled.div`
   width: 100%;
-  height: 35rem;
+  height: fit-content;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 3rem;
   padding-bottom: 3rem;
   justify-content: right;
 
   @media (max-width: 768px) {
+  flex-wrap: wrap;
+
     height: fit-content;
     img {
       height: 25rem !important;
