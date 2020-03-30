@@ -4,7 +4,7 @@ import {
   LogoDiv,
   LinksContainerDiv,
   LinkDiv,
-  IconCircule,
+  InsideLinkDiv,
   IconDiv,
 } from "./styles"
 import FeliciaLogo from "../../../content/assets/icons/feliciaarriba.svg"
@@ -20,20 +20,13 @@ const Header = () => {
       </LogoDiv>
       <LinksContainerDiv>
         <LinkDiv>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              marginLeft: "11.555555rem",
-            }}
-          >
+          <InsideLinkDiv>
             <Link>Inicio</Link>
             <Link>Nosotros</Link>
             <Link>Servicios</Link>
             <Link>Actividades</Link>
             <Link>Galeria</Link>
-          </div>
+          </InsideLinkDiv>
         </LinkDiv>
         <IconDiv>
           <img src={Facebook} style={{ width: "2rem", marginBottom: 0, cursor: 'pointer' }} />

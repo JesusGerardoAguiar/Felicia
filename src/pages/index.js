@@ -113,6 +113,10 @@ const BannerDiv = styled.div`
     text-align: center;
     font-size: 36px;
   }
+
+  @media (max-width: 768px) {
+    background-size: cover;
+   }
 `
 
 export default Blog

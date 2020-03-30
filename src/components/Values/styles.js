@@ -8,12 +8,15 @@ export const MainDiv = styled.div`
   flex-wrap: wrap;
   width: 100%;
   height: 35rem;
-
   h1 {
     font-family: "ArconRoundedR";
     color: #977867;
     text-transform: uppercase;
   }
+
+  @media (max-width: 768px) {
+    height: inherit;
+   }
 `
 
 export const ValuesDiv = styled.div`
@@ -41,12 +44,18 @@ export const ValuesDiv = styled.div`
     width: 12rem;
     line-height: 22px;
   }
-`
 
-export const ValuesBox = styled.div`
+  `
+  
+  export const ValuesBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
-
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+   margin-bottom: 5rem;
+  }
+  `
+  
+  
