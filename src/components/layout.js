@@ -16,10 +16,10 @@ class Layout extends React.Component {
           <header>{header}</header>
           <main>{children}</main>
         </div>
-        <Footer>
+        {/* <Footer>
           © {new Date().getFullYear()}, powered by
           {` `}
-        </Footer>
+        </Footer> */}
       </Wrapper>
     )
   }

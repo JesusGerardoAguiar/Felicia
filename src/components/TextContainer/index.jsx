@@ -20,7 +20,7 @@ const TextContainer = ({ img, texts, title, list }) => {
 
     return (
         <MainDiv>
-          <img src={img} style={{ width: "32rem" }} />
+          <img src={img} style={{ width: "28", height: '35rem' }} />
           <TextDiv>
             <h1>{title}</h1>
             {renderTexts()}

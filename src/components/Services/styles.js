@@ -32,6 +32,11 @@ export const ValuesDiv = styled.div`
   }
   h3{
     color: #977867;
+    @media (max-width: 768px) {
+      margin-left: 0px;
+      text-align: center;
+      margin-top:0px;
+    }
   }
   p{
     color: black;
@@ -40,6 +45,19 @@ export const ValuesDiv = styled.div`
     margin-top: 0.2rem;
     width: 25rem;
     line-height: 22px;
+
+    @media (max-width: 768px) {
+      padding: 2rem;
+      width: fit-content;
+      margin-left: 0px;
+      text-align: center;
+      font-size: 13px;
+      
+    }
+  }
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  margin-bottom: 0px;
   }
 `
 
@@ -49,7 +67,11 @@ export const ValuesBox = styled.div`
   justify-content: space-between;
   align-items: end;
   width: 30rem;
-
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
 
 `
 

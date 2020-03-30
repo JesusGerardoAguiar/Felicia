@@ -8,12 +8,18 @@ export const MainDiv = styled.div`
   flex-wrap: wrap;
   width: 100%;
   height: 35rem;
-
   h1 {
     font-family: "ArconRoundedR";
     color: #977867;
     text-transform: uppercase;
+    @media (max-width: 768px) {
+      margin-top:0px;
+    }
   }
+
+  @media (max-width: 768px) {
+    height: inherit;
+   }
 `
 
 export const ValuesDiv = styled.div`
@@ -30,9 +36,13 @@ export const ValuesDiv = styled.div`
     text-align: center;
     font-family: "QuicksandR";
     margin: 0;
+    
   }
   h3{
     color: #977867;
+    @media (max-width: 768px) {
+      margin-top:0px;
+    }
   }
   p{
     color: black;
@@ -40,13 +50,20 @@ export const ValuesDiv = styled.div`
     margin-top: 0.2rem;
     width: 12rem;
     line-height: 22px;
+    font-size: 13px;
   }
-`
 
-export const ValuesBox = styled.div`
+  `
+  
+  export const ValuesBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
-
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+   margin-bottom: 5rem;
+  }
+  `
+  
+  

@@ -1,40 +1,51 @@
 import styled from "styled-components"
 
+export const InsideLinkDiv = styled.div`
+  display: flex;
+  flexd-irection: row;
+  justify-content: center;
+  margin-left: 11.555555rem;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+   margin-left: 0rem;
+  }
+`
+
 export const LinkDiv = styled.div`
   font-size: 15px;
-  color: #A1AA79;
+  color: #a1aa79;
   font-family: "ArconRoundedR";
   font-weight: 300;
   text-align: center;
   cursor: pointer;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 65rem;
   justify-content: space-evenly;
   display: flex;
   text-transform: uppercase;
   a {
     text-decoration: none !important;
-    color: #A1AA79 !important;
+    color: #a1aa79 !important;
     box-shadow: none;
-    margin-right: 4rem;
+    width: 100%;
     text-transform: uppercase;
   }
 
   @media (max-width: 768px) {
-    color: #A1AA79;
-    font-family: MonteserratR;
+    color: #a1aa79;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
-
+    width: 100%;
     a {
       text-decoration: none;
-      color: #A1AA79;
+      color: #a1aa79;
     }
   }
 `
 export const LogoDiv = styled.div`
-width: 100%;
+  width: 100%;
   height: 8rem;
   display: flex;
   flex-direction: row;
@@ -46,12 +57,18 @@ export const LinksContainerDiv = styled.div`
   height: 5rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  border: 3px solid #F4E1C1;
+  border: 3px solid #f4e1c1;
   border-right: none;
   border-left: none;
   border-bottom: none;
   align-items: center;
+
+  @media (max-width: 768px) {
+    height: 16rem;
+    margin-bottom: 10px;
+   }
 `
 
 export const MainDiv = styled.nav`
@@ -60,6 +77,14 @@ export const MainDiv = styled.nav`
   @media (max-width: 768px) {
     padding-right: 1rem;
     padding-left: 1rem;
+    flex-direction: row;
+    img {
+      margin-bottom: 0px;
+      width: 3rem!important;
+    }
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
   }
 `
 
@@ -86,7 +111,6 @@ export const DivOptions = styled.div`
   }
 `
 
-
 export const LinkImg = styled.div`
   text-align: center;
   cursor: pointer;
@@ -106,10 +130,9 @@ export const IconCircule = styled.div`
   flex-direction: row;
   align-items: center;
   border-radius: 18px;
-  border: 5px solid #F4E1C1;
+  border: 5px solid #f4e1c1;
   width: 2rem;
-    height: 2rem;
-
+  height: 2rem;
 `
 
 export const IconDiv = styled.div`
@@ -118,4 +141,13 @@ export const IconDiv = styled.div`
   width: 5rem;
   justify-content: space-evenly;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+    img{
+      margin-right: 1rem;
+      
+    }
+  }
 `
