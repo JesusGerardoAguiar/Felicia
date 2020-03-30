@@ -15,6 +15,8 @@ import { isMobile } from "react-device-detect"
 import Drawer from "@material-ui/core/Drawer"
 import { makeStyles, useTheme } from "@material-ui/core/styles"
 import IconButton from "@material-ui/core/IconButton"
+import Hamburguer from '../../../content/assets/icons/hamburguer.svg';
+import Close from '../../../content/assets/icons/close.svg'
 
 const drawerWidth = 240
 
@@ -96,8 +98,10 @@ const Header = () => {
             paper: classes.drawerPaper
           }}
         >
-          <div className={classes.drawerHeader} onClick={() => setOpen(false)}>
-            close
+          <div className={classes.drawerHeader}>
+          <IconButton onClick={() => setOpen(false)}>
+              <div>close</div>
+            </IconButton>
           </div>
           <LinkDiv onClick={() => setOpen(false)}><Link >Inicio</Link></LinkDiv>
           <LinkDiv onClick={() => setOpen(false)}><Link >Nosotros</Link></LinkDiv>
