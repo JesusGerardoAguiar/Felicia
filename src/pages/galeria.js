@@ -48,9 +48,9 @@ const GalleryDiv = styled.div`
 `
 
 const ImageDiv = styled.div`
-  border-radius: 168px;
-  width: 21rem;
-  height: 20rem;
+border-radius: 200px;
+width: 25rem;
+height: 25rem;
   border: 15px solid #a1aa79;
   cursor: pointer;
   margin-bottom: 1rem;
