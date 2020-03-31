@@ -15,6 +15,10 @@ import Drawer from "@material-ui/core/Drawer"
 import { makeStyles, useTheme } from "@material-ui/core/styles"
 import IconButton from "@material-ui/core/IconButton"
 import Media from "react-media"
+import Scroll from "react-scroll"
+const scroller = Scroll.scroller
+const Events = Scroll.Events
+const LinkScroll = Scroll.Link
 const drawerWidth = 240
 
 const useStyles = makeStyles(theme => ({
@@ -74,7 +78,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const Header = ({ isMobile }) => {
+const Header = () => {
   const [open, setOpen] = useState(false)
   const classes = useStyles()
 
@@ -105,11 +109,30 @@ const Header = ({ isMobile }) => {
             <LinkDiv onClick={() => setOpen(false)}>
               <Link>Inicio</Link>
             </LinkDiv>
+
             <LinkDiv onClick={() => setOpen(false)}>
-              <Link>Nosotros</Link>
+              <LinkScroll
+                activeClass="active"
+                to="AboutUs"
+                onClick={() => setOpen(false)}
+                spy={true}
+                smooth={true}
+                duration={400}
+              >
+                Nosotros
+              </LinkScroll>
             </LinkDiv>
             <LinkDiv onClick={() => setOpen(false)}>
-              <Link>Servicios</Link>
+              <LinkScroll
+                activeClass="active"
+                to="Services"
+                onClick={() => setOpen(false)}
+                spy={true}
+                smooth={true}
+                duration={400}
+              >
+                Servicios
+              </LinkScroll>
             </LinkDiv>
             <LinkDiv onClick={() => setOpen(false)}>
               <Link>Actividades</Link>
@@ -140,8 +163,24 @@ const Header = ({ isMobile }) => {
             <LinkDiv>
               <InsideLinkDiv>
                 <Link>Inicio</Link>
-                <Link>Nosotros</Link>
-                <Link>Servicios</Link>
+                <LinkScroll
+                  activeClass="active"
+                  to="AboutUs"
+                  spy={true}
+                  smooth={true}
+                  duration={400}
+                >
+                  Nosotros
+                </LinkScroll>
+                <LinkScroll
+                  activeClass="active"
+                  to="Services"
+                  spy={true}
+                  smooth={true}
+                  duration={400}
+                >
+                  Servicios
+                </LinkScroll>
                 <Link>Actividades</Link>
                 <Link>Galeria</Link>
               </InsideLinkDiv>
