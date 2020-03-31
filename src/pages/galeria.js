@@ -2,35 +2,32 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 import styled, { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
-    font-family: MontserratL;
-    src: url(${require("../../content/assets/fonts/Montserrat-Light.ttf")});
+    font-family: QuicksandR;
+    src: url(${require("../../content/assets/fonts/Quicksand-Regular.ttf")});
   }
   @font-face {
-    font-family: MonteserratR;
-    src: url(${require("../../content/assets/fonts/Montserrat-Regular.otf")});
-  }
-  @font-face {
-    font-family: MonteserratB;
-    src: url(${require("../../content/assets/fonts/Montserrat-Bold.otf")});
+    font-family: ArconRoundedR;
+    src: url(${require("../../content/assets/fonts/Arcon-Rounded-Regular.otf")});
   }
 `
 
 const Gallery = props => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
-  console.log(data)
   const galleryPics = data.allMdx.nodes
 
   const renderGallery = galleryPics => {
-    return galleryPics.map(image => (
-      <ImageDiv backgroundImg={image.frontmatter.Image} />
-    ))
+    return galleryPics.map(image => {
+      console.log(image.frontmatter.Image)
+      if(image.frontmatter.Image !== null){
+        return (<ImageDiv backgroundImg={image.frontmatter.Image} />)
+      }
+      return <></>
+    })
   }
 
   return (
@@ -46,34 +43,39 @@ const GalleryDiv = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 3rem;
+  padding: 2rem;
+  justify-content: space-around;
 `
 
 const ImageDiv = styled.div`
-  width: 20rem;
-  height: 15rem;
-  border: 1px solid black;
+  border-radius: 168px;
+  width: 21rem;
+  height: 20rem;
+  border: 15px solid #a1aa79;
   cursor: pointer;
   margin-bottom: 1rem;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
-  background-image: url(${props => props.backgroundImg});
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  background-image: url(${props => props.backgroundImg});
   :hover {
     opacity: 0.5;
     background-color: #f3b52a;
     transition: 1s;
   }
+
+  @media (max-width: 768px) {
+    height: 18rem;
+   }
 `
 
-
 export const Title = styled.h1`
-    font-family: MonteserratB;
-    text-align: center;
-    padding: 1rem;
+  font-family: ArconRoundedR;
+  text-align: center;
+  color: #977867;
+  padding: 1rem;
 `
 
 export default Gallery
