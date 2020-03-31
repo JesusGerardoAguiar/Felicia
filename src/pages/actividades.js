@@ -29,16 +29,29 @@ const Actividades = props => {
         console.log(activity.frontmatter.activityImages)
         return (
           <ActivityContainer>
-            <Carousel
-              totalSlides={2}
-              StyledCarousel={StyledCarousel}
-              StyledSlider={StyledSlider}
-              StyledSlide={StyledSlide}
-            >
-              {activity.frontmatter.activityImages.map(image => {
-                return <ImageDiv backgroundImg={image}></ImageDiv>
-              })}
-            </Carousel>
+            <ImageDiv>
+              <Carousel
+                totalSlides={activity.frontmatter.activityImages.length}
+                StyledCarousel={StyledCarousel}
+                StyledSlider={StyledSlider}
+                StyledSlide={StyledSlide}
+              >
+                {activity.frontmatter.activityImages.map(image => {
+                  return (
+                    <ImageDiv
+                      backgroundImg={image}
+                      style={{
+                        border: "none",
+                        width: "18.2rem",
+                        height: "18.2rem",
+                        marginLeft: "1.4rem",
+                        marginRight: "0px",
+                      }}
+                    />
+                  )
+                })}
+              </Carousel>
+            </ImageDiv>
             <BoxText>
               <h2>{activity.frontmatter.activityTitle}</h2>
               <p>{activity.frontmatter.activityDescription}</p>
@@ -47,7 +60,6 @@ const Actividades = props => {
         )
       }
       return <></>
-      // <ImageDiv backgroundImg={image.frontmatter.Image} />
     })
   }
 
@@ -108,6 +120,7 @@ const BoxText = styled.div`
   flex-direction: column;
   flex-direction: start;
   overflow-x: auto;
+  scrollbar-color: #f4e1c1;
   h2 {
     font-family: ArconRoundedR;
     color: #977867;
@@ -152,8 +165,8 @@ export const StyledCarousel = styled(CarouselProvider)`
 `
 
 export const StyledSlider = styled(Slider)`
-width: 21rem;
-height: 21rem;
+  width: 21rem;
+  height: 21rem;
   justify-content: flex-start;
   display: flex;
   flex-direction: column;

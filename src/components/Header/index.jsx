@@ -14,10 +14,11 @@ import { Link } from "gatsby"
 import Drawer from "@material-ui/core/Drawer"
 import { makeStyles, useTheme } from "@material-ui/core/styles"
 import IconButton from "@material-ui/core/IconButton"
+import Hamburguer from '../../../content/assets/icons/hamburger.svg'
+import Close from '../../../content/assets/icons/close.svg'
 import Media from "react-media"
 import Scroll from "react-scroll"
-const scroller = Scroll.scroller
-const Events = Scroll.Events
+
 const LinkScroll = Scroll.Link
 const drawerWidth = 240
 
@@ -87,7 +88,7 @@ const Header = () => {
       return (
         <div>
           <MainDiv>
-            <div onClick={() => setOpen(true)}>open</div>
+            <div onClick={() => setOpen(true)}><img src={Hamburguer} style={{width: '3rem'}}/></div>
 
             <img src={FeliciaLogo} alt="logo" style={{ width: "10rem" }} />
           </MainDiv>
@@ -103,7 +104,7 @@ const Header = () => {
           >
             <div className={classes.drawerHeader}>
               <IconButton onClick={() => setOpen(false)}>
-                <div>close</div>
+              <div><img src={Close}  style={{width: '1rem'}}/></div>
               </IconButton>
             </div>
             <LinkDiv onClick={() => setOpen(false)}>
