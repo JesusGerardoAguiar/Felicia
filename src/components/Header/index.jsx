@@ -135,7 +135,7 @@ const Header = () => {
               </LinkScroll>
             </LinkDiv>
             <LinkDiv onClick={() => setOpen(false)}>
-              <Link>Actividades</Link>
+              <Link to="/actividades">Actividades</Link>
             </LinkDiv>
             <LinkDiv onClick={() => setOpen(false)}>
               <Link to="/galeria">Galeria</Link>
@@ -181,7 +181,7 @@ const Header = () => {
                 >
                   Servicios
                 </LinkScroll>
-                <Link>Actividades</Link>
+                <Link to="/actividades">Actividades</Link>
                 <Link to="/galeria">Galeria</Link>
               </InsideLinkDiv>
             </LinkDiv>
