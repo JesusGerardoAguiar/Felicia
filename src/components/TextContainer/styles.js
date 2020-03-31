@@ -13,9 +13,8 @@ export const MainDiv = styled.div`
   @media (max-width: 768px) {
   flex-wrap: wrap;
 
-    height: fit-content;
     img {
-      height: 25rem !important;
+      width: 20rem !important;
     }
   }
 `
