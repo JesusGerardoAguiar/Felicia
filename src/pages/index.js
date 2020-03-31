@@ -11,6 +11,9 @@ import ImagenNosotros1 from "../../content/assets/img/imagenesredondas-01.png"
 import ImagenNosotros6 from "../../content/assets/img/imagenesredondas-06.png"
 import ImagenesRedondas5 from "../../content/assets/img/imagenesredondas-05.png"
 
+import Scroll from 'react-scroll';
+const Element = Scroll.Element;
+
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -24,21 +27,22 @@ const GlobalStyles = createGlobalStyle`
 `
 
 const arrayTexts = [
-  "Un agradable ambiente, se aprecia el paisaje y el arte, hay risas y diversión. Experiencias que nos hacen sentir vivos. Nos imaginamos un cambio del rol del adulto mayor en nuestra sociedad. Nuestra inspiración es dignificar la vida.",
-  "Buscamos cuidar a nuestros residentes y apoyar a sus familias para que se sientan queridos, valorados, respetados e integrados a nuestra sociedad.",
-  "Nuestro equipo de trabajo reúne las capacidades humanas y técnicas necesarias para asegurar nuestra excelencia, brindando experiencias únicas de bienestar y comodidad.",
-  "Nuestras opciones de servicios generales y de estimulación sensorial permiten adecuar cada estadía a las necesidades específicas de cada uno de nuestros residentes, asegurando una experiencia única y plena.",
+  "Un lugar de convivencia para adultos mayores, amparados en un agradable ambiente, buscando cambiar su rol en la sociedad.",
+  "Nuestra inspiración es dignificar la vida, teniendo como objetivo cuidar a nuestras personas usuarias y apoyar a sus familias para que se sientan queridos, valorados, respetados e integrados.",
+  "Brindamos un espacio de puertas abiertas, favoreciendo la inclusión social. Somos un equipo de trabajo con las capacidades humanas y técnicas necesarias para asegurar la excelencia.",
+  "Nuestras opciones de servicios adecuadas a cada persona y sus necesidades aseguran una experiencia única y plena.",
 ]
 
 const arrayListFacilities = [
+  "Amplio estar comedor panorámico.",
+  "Habitaciones iluminadas con vistas al parque.",
   "Áreas específicas para actividades individuales y grupales.",
-  "SUM.",
-  "Espacios de circulación interior y exterior amplios, seguros y accesibles.",
-  "Biblioteca.",
-  "Sala de juegos.",
-  "Estufa a leña.",
-  "Parque enjardinado con terraza, mesas y sillas, parrillero.",
-  "Entorno natural, tranquilo, privado.",
+  "SUM (Salón de usos múltiples).",
+  "Biblioteca y sala de juegos.",
+  "Parque, terraza y parrillero.",
+  "Sala de cine.",
+  "Entorno natural, tranquilo y privado.",
+  "Espacios de circulación interior/ exterior amplios seguros y accesibles."
 
 ]
 
@@ -56,17 +60,16 @@ class Blog extends React.Component {
         <BannerDiv backgroundImg={FondoVerde}>
           <img
             src={FeliciaLogo}
-            style={{ width: "20rem", marginBottom: "4rem" }}
+            style={{ width: "25rem", marginBottom: "4rem" }}
           />
-          <h1>Centro, Durazno. Paisaje y arte.</h1>
         </BannerDiv>
-        <div id="AboutUs">
+        <Element  name="AboutUs">
           <TextContainer
             img={ImagenNosotros1}
             title={"Nosotros"}
             texts={arrayTexts}
           />
-        </div>
+        </Element>
         <div id="Values">
           <Values />
         </div>
@@ -83,7 +86,7 @@ class Blog extends React.Component {
         <div id="Stay">
         <TextContainer
             img={ImagenesRedondas5}
-            title={"Instalaciones"}
+            title={"Estadias"}
             list={arrayListStay}
             texts={["Al ingreso, nuestro equipo médico efectúa una entrevista donde se relevan las necesidades y preferencias del futuro residente, para determinar su perfil particular. En base a dicho perfil, se diseña una experiencia única y personalizada que combina el tipo de estadía con los servicios ofrecidos por nuestra residencia."]}
           />

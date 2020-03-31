@@ -64,7 +64,6 @@ export const LinksContainerDiv = styled.div`
   border: 3px solid #f4e1c1;
   border-right: none;
   border-left: none;
-  border-bottom: none;
   align-items: center;
 
   @media (max-width: 768px) {

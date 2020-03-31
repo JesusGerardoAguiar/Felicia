@@ -14,7 +14,12 @@ import { Link } from "gatsby"
 import Drawer from "@material-ui/core/Drawer"
 import { makeStyles, useTheme } from "@material-ui/core/styles"
 import IconButton from "@material-ui/core/IconButton"
+import Hamburguer from '../../../content/assets/icons/hamburger.svg'
+import Close from '../../../content/assets/icons/close.svg'
 import Media from "react-media"
+import Scroll from "react-scroll"
+
+const LinkScroll = Scroll.Link
 const drawerWidth = 240
 
 const useStyles = makeStyles(theme => ({
@@ -74,7 +79,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const Header = ({ isMobile }) => {
+const Header = () => {
   const [open, setOpen] = useState(false)
   const classes = useStyles()
 
@@ -83,7 +88,7 @@ const Header = ({ isMobile }) => {
       return (
         <div>
           <MainDiv>
-            <div onClick={() => setOpen(true)}>open</div>
+            <div onClick={() => setOpen(true)}><img src={Hamburguer} style={{width: '3rem'}}/></div>
 
             <img src={FeliciaLogo} alt="logo" style={{ width: "10rem" }} />
           </MainDiv>
@@ -99,23 +104,42 @@ const Header = ({ isMobile }) => {
           >
             <div className={classes.drawerHeader}>
               <IconButton onClick={() => setOpen(false)}>
-                <div>close</div>
+              <div><img src={Close}  style={{width: '1rem'}}/></div>
               </IconButton>
             </div>
             <LinkDiv onClick={() => setOpen(false)}>
               <Link>Inicio</Link>
             </LinkDiv>
+
             <LinkDiv onClick={() => setOpen(false)}>
-              <Link>Nosotros</Link>
+              <LinkScroll
+                activeClass="active"
+                to="AboutUs"
+                onClick={() => setOpen(false)}
+                spy={true}
+                smooth={true}
+                duration={400}
+              >
+                Nosotros
+              </LinkScroll>
             </LinkDiv>
             <LinkDiv onClick={() => setOpen(false)}>
-              <Link>Servicios</Link>
+              <LinkScroll
+                activeClass="active"
+                to="Services"
+                onClick={() => setOpen(false)}
+                spy={true}
+                smooth={true}
+                duration={400}
+              >
+                Servicios
+              </LinkScroll>
             </LinkDiv>
             <LinkDiv onClick={() => setOpen(false)}>
-              <Link>Actividades</Link>
+              <Link to="/actividades">Actividades</Link>
             </LinkDiv>
             <LinkDiv onClick={() => setOpen(false)}>
-              <Link>Galeria</Link>
+              <Link to="/galeria">Galeria</Link>
             </LinkDiv>
             <IconDiv>
               <img
@@ -140,10 +164,26 @@ const Header = ({ isMobile }) => {
             <LinkDiv>
               <InsideLinkDiv>
                 <Link>Inicio</Link>
-                <Link>Nosotros</Link>
-                <Link>Servicios</Link>
-                <Link>Actividades</Link>
-                <Link>Galeria</Link>
+                <LinkScroll
+                  activeClass="active"
+                  to="AboutUs"
+                  spy={true}
+                  smooth={true}
+                  duration={400}
+                >
+                  Nosotros
+                </LinkScroll>
+                <LinkScroll
+                  activeClass="active"
+                  to="Services"
+                  spy={true}
+                  smooth={true}
+                  duration={400}
+                >
+                  Servicios
+                </LinkScroll>
+                <Link to="/actividades">Actividades</Link>
+                <Link to="/galeria">Galeria</Link>
               </InsideLinkDiv>
             </LinkDiv>
             <IconDiv>

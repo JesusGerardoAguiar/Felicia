@@ -15,24 +15,16 @@ const Values = () => {
           <TextDiv>
             <h3>Médicos</h3>
             <p>
-              -Dirección técnica médica.
-              <br />
-              -Coordinación con personal especializado.
+              -Estadías permanentes, diurnas y temporales (post-operatorios,
+              rehabilitación, convalecencia, vacaciones).
               <br />
               -Atención médica diaria.
               <br />
-              -Servicio de enfermería.
+              -Servicio de enfermería especializado.
               <br />
-              -Fisioterapia y rehabilitación. <br />
-              -Rehabilitación.
+              -Fisioterapia y rehabilitación.
               <br />
-              -Valoración Geriátrica Integral (VGI)<br/>
-               -Estimulación cognitiva y
-              motora.
-              <br />
-              -Menú saludable personalizado con supervisión médica.
-              <br />
-              -Nurse coordinador.
+              -Nurse coordinadora.
               <br />
               -Nutricionista.
               <br />
