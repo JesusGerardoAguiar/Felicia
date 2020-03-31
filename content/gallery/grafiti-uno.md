@@ -1,7 +1,7 @@
 ---
-path: grafiti1
-title: grafiti uno
-description: este es nuestro primer grafiti
-Image: /assets/marjanblan-_cjdybnnvio-unsplash.jpg
+path: imagen1
+title: Imagen1
+description: imagen1
+Image: /assets/whatsapp-image-2020-03-28-at-5.57.09-pm.jpeg
 ---
 
