@@ -37,7 +37,7 @@ const Wrapper = styled.div`
 const Footer = styled.footer`
   text-align: center;
   margin: 24px;
-  font-size: 24px;
+  font-size: 18px;
   font-family: "ArconRoundedR";;
   display: flex;
   flex-direction: row;
@@ -50,7 +50,7 @@ const Footer = styled.footer`
 
   }
   img{
-    width: 6rem;
+    width: 5rem;
     margin-bottom: 0px;
     margin-left: 0.5rem;
   }

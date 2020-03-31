@@ -76,6 +76,7 @@ export const Title = styled.h1`
   text-align: center;
   color: #977867;
   padding: 1rem;
+  text-transform: uppercase;
 `
 
 export default Gallery
