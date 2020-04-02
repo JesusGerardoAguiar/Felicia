@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextDiv, MainDiv, ListValue} from './styles';
+import { TextDiv, MainDiv, ListValue, ImgDiv} from './styles';
 
 const TextContainer = ({ img, texts, title, list }) => {
     const renderTexts = () => {
@@ -20,7 +20,7 @@ const TextContainer = ({ img, texts, title, list }) => {
 
     return (
         <MainDiv>
-          <img src={img} style={{ width: "28rem" }} />
+          <img src={img} style={{ width: "28rem", height: "38rem" }} />
           <TextDiv>
             <h1>{title}</h1>
             {renderTexts()}

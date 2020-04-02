@@ -11,11 +11,11 @@ export const MainDiv = styled.div`
   justify-content: right;
 
   @media (max-width: 768px) {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 
     img {
       width: 20rem !important;
-      height: 26rem!important;
+      height: 26rem !important;
     }
   }
 `
@@ -35,7 +35,7 @@ export const TextDiv = styled.div`
     text-transform: uppercase;
     @media (max-width: 768px) {
       text-align: center;
-      margin-top:0px;
+      margin-top: 0px;
     }
   }
   p {
@@ -44,7 +44,7 @@ export const TextDiv = styled.div`
     @media (max-width: 768px) {
       text-align: center;
       font-size: 13px;
-      margin-top:0px;
+      margin-top: 0px;
     }
   }
   ul {
@@ -53,7 +53,7 @@ export const TextDiv = styled.div`
       text-align: center;
       margin: 0;
       font-size: 13px;
-      margin-top:0px;
+      margin-top: 0px;
     }
   }
   @media (max-width: 768px) {
