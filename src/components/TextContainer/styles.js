@@ -15,6 +15,7 @@ export const MainDiv = styled.div`
 
     img {
       width: 20rem !important;
+      height: 26rem!important;
     }
   }
 `
