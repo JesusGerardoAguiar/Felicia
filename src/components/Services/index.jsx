@@ -11,85 +11,82 @@ const Values = () => {
       <h1>Servicios</h1>
       <ValuesDiv>
         <ValuesBox>
-          <img src={Medico} style={{ width: "7rem" }} />
+          <img src={PersonaCerebro} style={{ width: "7rem" }} />
           <TextDiv>
-            <h3>Médicos</h3>
-            <p>
-              -Estadías permanentes, diurnas y temporales (post-operatorios,
-              rehabilitación, convalecencia, vacaciones).
-              <br />
-              -Atención médica diaria.
-              <br />
-              -Servicio de enfermería especializado.
-              <br />
-              -Fisioterapia y rehabilitación.
-              <br />
-              -Nurse coordinadora.
-              <br />
-              -Nutricionista.
-              <br />
-              -Psicólogo.
-              <br />
-            </p>
+            <div
+              style={{
+                display: "flex",
+                width: "40rem",
+                flexDirection: "row",
+                justifyContent: "center",
+              }}
+            >
+              <p>
+                -Estadías permanentes, diurnas y temporales (post-operatorios,
+                rehabilitación, convalecencia, vacaciones).
+                <br />
+                -Atención médica diaria.
+                <br />
+                -Servicio de enfermería especializado.
+                <br />
+                -Fisioterapia y rehabilitación.
+                <br />
+                -Nurse coordinadora.
+                <br />
+                -Nutricionista.
+                <br />
+                -Psicólogo.
+                <br />
+                -Estimulación cognitiva y motora.
+                <br />
+                -Fisioterapia y rehabilitación.
+                <br />
+              </p>
+              <p>
+                -Musicoterapia.
+                <br />
+                -Menú saludable personalizado elaborado en el día a cargo de
+                nuestro Chef.
+                <br />
+                -Tai Chi, Gimnasia y yoga.
+                <br />
+                -Reiki.
+                <br />
+                -Taller literario.
+                <br />
+                -Taller de avistamiento de aves.
+                <br />
+                -Taller de jardinería y huerta.
+                <br />
+                -Taller de arte y manualidades.
+                <br />
+                -Servicios estéticos.
+                <br />
+                -Talleres, charlas y eventos integrando usuarios y comunidad.
+              </p>
+            </div>
           </TextDiv>
         </ValuesBox>
         <ValuesBox>
           <img src={Manito} style={{ width: "7rem" }} />
           <TextDiv>
-            <h3>Generales</h3>
-            <p>
-              -Coordinación de comidas y eventos para los residentes y sus
-              familiares en el SUM.
-              <br />
-              -Coordinación de servicios estéticos (peluquería, podología,
-              manicura, maquillaje).
-              <br />
-              -Organización de talleres, charlas y eventos para la integración
-              del residente y su comunidad. <br />
-              -Coordinación de juegos y entretenimientos.
-              <br />
-              -Servicio de lavandería.
-              <br />
-              -Servicio de WIFI en toda la residencia.
-              <br /> -Sala de cine
-            </p>
-          </TextDiv>
-        </ValuesBox>
-      </ValuesDiv>
-      <ValuesDiv>
-        <ValuesBox>
-          <img src={PersonaCerebro} style={{ width: "7rem" }} />
-          <TextDiv>
-            <h3>Estimulación sensorial</h3>
-            <p>
-              -Tai Chi o Gimnasia bioenergética, Reiki o Yoga o Biodanza.
-              <br />
-              -Taller de lectura. <br />
-              -Escritura.
-              <br />
-              -Taller de avistamiento de aves.
-              <br />
-              -Taller de astronomía.
-              <br />
-              -Taller de botánica.
-              <br />
-              -Taller de jardinería y huerta.
-              <br />
-            </p>
-          </TextDiv>
-        </ValuesBox>
-        <ValuesBox>
-          <img src={Ambulancia} style={{ width: "7rem" }} />
-          <TextDiv>
             <h3>Adicionales</h3>
-            <p>
-              -Traslados.
-              <br />
-              -Alquiler de ortopedia y artículos médicos.
-              <br />
-              -Pañales.
-              <br />
-            </p>
+            <div
+              style={{
+                display: "flex",
+                width: "40rem",
+                flexDirection: "row",
+              }}
+            >
+              <p>
+                -Traslados.
+                <br />
+                -Alquiler de ortopedia y artículos médicos.
+                <br />
+                -Pañales.
+                <br />
+              </p>
+            </div>
           </TextDiv>
         </ValuesBox>
       </ValuesDiv>
