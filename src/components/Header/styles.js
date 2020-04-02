@@ -27,9 +27,10 @@ export const LinkDiv = styled.div`
   a {
     text-decoration: none !important;
     color: #a1aa79 !important;
-    box-shadow: none;
+    box-shadow: none!important;
     margin-right: 4rem;
     text-transform: uppercase;
+    border: none;
   }
 
   @media (max-width: 768px) {
@@ -141,7 +142,14 @@ export const IconDiv = styled.div`
   flex-direction: row;
   width: 5rem;
   justify-content: space-evenly;
+  a{
+    text-decoration: none !important;
+    box-shadow: none!important;
+    text-transform: uppercase;
+    border: none;
+    height: 32px;
 
+  }
   @media (max-width: 768px) {
     width: 100%;
     justify-content: center;

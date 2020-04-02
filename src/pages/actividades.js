@@ -81,6 +81,10 @@ const ActivitiesDiv = styled.div`
   flex-wrap: wrap;
   padding-left: 2rem;
   padding-right: 2rem;
+  @media (max-width: 768px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 `
 
 const ActivityContainer = styled.div`
@@ -88,6 +92,12 @@ const ActivityContainer = styled.div`
   flex-direction: row;
   width: 50rem;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: fit-content;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
 `
 
 const ImageDiv = styled.div`
@@ -104,7 +114,6 @@ const ImageDiv = styled.div`
   background-size: cover;
   background-image: url(${props => props.backgroundImg});
   @media (max-width: 768px) {
-    height: 18rem;
   }
 `
 
@@ -135,6 +144,17 @@ const BoxText = styled.div`
     text-align: justify;
     padding-right: 2rem;
   }
+  @media (max-width: 768px) {
+    margin-left: 0px;
+    border-left: 5px solid #f4e1c1;
+    p {
+      padding-left: 2rem;
+    }
+    h2{
+      text-align: center;
+      padding-left: 0px;
+    }
+  }
 `
 
 export const Title = styled.h1`
@@ -161,7 +181,6 @@ export const StyledCarousel = styled(CarouselProvider)`
   }
 
   @media (max-width: 768px) {
-    width: 100vw;
   }
 `
 
@@ -173,7 +192,6 @@ export const StyledSlider = styled(Slider)`
   flex-direction: column;
 
   @media (max-width: 768px) {
-    width: 100vw;
   }
 `
 

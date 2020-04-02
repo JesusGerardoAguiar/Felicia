@@ -17,13 +17,17 @@ export const MainDiv = styled.div`
 
 export const ValuesDiv = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+    justify-content: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 2rem;
   margin-bottom: 2rem;
   width: 100%;
-  align-items: baseline;
+  align-items: center;
+  justify-content: space-between;
+  height: 30rem;
   h3, p{
     text-align: start;
     font-family: "QuicksandR";
@@ -66,7 +70,7 @@ export const ValuesBox = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: end;
-  width: 30rem;
+  width: fit-content;
   @media (max-width: 768px) {
     justify-content: center;
     margin-bottom: 1rem;

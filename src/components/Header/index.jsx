@@ -14,8 +14,8 @@ import { Link } from "gatsby"
 import Drawer from "@material-ui/core/Drawer"
 import { makeStyles, useTheme } from "@material-ui/core/styles"
 import IconButton from "@material-ui/core/IconButton"
-import Hamburguer from '../../../content/assets/icons/hamburger.svg'
-import Close from '../../../content/assets/icons/close.svg'
+import Hamburguer from "../../../content/assets/icons/hamburger.svg"
+import Close from "../../../content/assets/icons/close.svg"
 import Media from "react-media"
 import Scroll from "react-scroll"
 
@@ -88,7 +88,9 @@ const Header = () => {
       return (
         <div>
           <MainDiv>
-            <div onClick={() => setOpen(true)}><img src={Hamburguer} style={{width: '3rem'}}/></div>
+            <div onClick={() => setOpen(true)}>
+              <img src={Hamburguer} style={{ width: "3rem" }} />
+            </div>
 
             <img src={FeliciaLogo} alt="logo" style={{ width: "10rem" }} />
           </MainDiv>
@@ -104,7 +106,9 @@ const Header = () => {
           >
             <div className={classes.drawerHeader}>
               <IconButton onClick={() => setOpen(false)}>
-              <div><img src={Close}  style={{width: '1rem'}}/></div>
+                <div>
+                  <img src={Close} style={{ width: "1rem" }} />
+                </div>
               </IconButton>
             </div>
             <LinkDiv onClick={() => setOpen(false)}>
@@ -142,14 +146,24 @@ const Header = () => {
               <Link to="/galeria">Galeria</Link>
             </LinkDiv>
             <IconDiv>
-              <img
-                src={Facebook}
-                style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
-              />
-              <img
-                src={Instagram}
-                style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
-              />
+              <a
+                href="https://www.facebook.com/alfon3527/?__tn__=%2Cd%2CP-R&eid=ARCVpWnXJ9zy8nLvG0m4NGMz58CH_enI8kAfzsGnoJHLuamHlAPBDQlKELeNyjuQ87AEVCxcgV0y2Ja9"
+                target="_blank"
+              >
+                <img
+                  src={Facebook}
+                  style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/felicia_stabernardina/"
+                target="_blank"
+              >
+                <img
+                  src={Instagram}
+                  style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
+                />
+              </a>
             </IconDiv>
           </Drawer>
         </div>
@@ -171,7 +185,7 @@ const Header = () => {
                   smooth={true}
                   duration={400}
                 >
-                  Nosotros
+                   <Link to="" style={{ marginRight: "0px"}}>Nosotros</Link>
                 </LinkScroll>
                 <LinkScroll
                   activeClass="active"
@@ -180,21 +194,31 @@ const Header = () => {
                   smooth={true}
                   duration={400}
                 >
-                  Servicios
+                  <Link to="" style={{ marginRight: "0px"}}>Servicios</Link>
                 </LinkScroll>
                 <Link to="/actividades">Actividades</Link>
                 <Link to="/galeria">Galeria</Link>
               </InsideLinkDiv>
             </LinkDiv>
             <IconDiv>
-              <img
-                src={Facebook}
-                style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
-              />
-              <img
-                src={Instagram}
-                style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
-              />
+              <a
+                href="https://www.facebook.com/alfon3527/?__tn__=%2Cd%2CP-R&eid=ARCVpWnXJ9zy8nLvG0m4NGMz58CH_enI8kAfzsGnoJHLuamHlAPBDQlKELeNyjuQ87AEVCxcgV0y2Ja9"
+                target="_blank"
+              >
+                <img
+                  src={Facebook}
+                  style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/felicia_stabernardina/"
+                target="_blank"
+              >
+                <img
+                  src={Instagram}
+                  style={{ width: "2rem", marginBottom: 0, cursor: "pointer" }}
+                />
+              </a>
             </IconDiv>
           </LinksContainerDiv>
         </MainDiv>
