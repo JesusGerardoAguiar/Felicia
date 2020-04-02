@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Felicia`,
+    title: `Felicia Durazno`,
     author: `LOGRAF`,
-    description: `servicico`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `Felicia, Un lugar de convivencia para adultos mayores, amparados en un agradable ambiente, buscando cambiar su rol en la sociedad.`,
+    siteUrl: `https://www.feliciadurazno.com/`,
     social: {
       twitter: `kylemathews`,
     },
