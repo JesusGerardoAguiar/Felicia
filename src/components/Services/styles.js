@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components"
+
+export const TextCon = styled.div`
+  display: flex;
+  width: 40rem;
+  flex-direction: row;
+  justify-content: center;
+  @media (max-width: 768px) {
+    width: fit-content;
+    flex-direction: column;
+  }
+`
 
 export const MainDiv = styled.div`
   display: flex;
@@ -19,7 +30,7 @@ export const ValuesDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-    justify-content: center;
+  justify-content: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 2rem;
@@ -28,21 +39,22 @@ export const ValuesDiv = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 30rem;
-  h3, p{
+  h3,
+  p {
     text-align: start;
     font-family: "QuicksandR";
     margin: 0;
     margin-left: 3rem;
   }
-  h3{
+  h3 {
     color: #977867;
     @media (max-width: 768px) {
       margin-left: 0px;
       text-align: center;
-      margin-top:0px;
+      margin-top: 0px;
     }
   }
-  p{
+  p {
     color: black;
     margin: 0;
     margin-left: 3rem;
@@ -56,12 +68,13 @@ export const ValuesDiv = styled.div`
       margin-left: 0px;
       text-align: center;
       font-size: 13px;
-      
     }
   }
   @media (max-width: 768px) {
     margin-top: 0px;
-  margin-bottom: 0px;
+    margin-bottom: 0px;
+    flex-direction: row;
+    height: fit-content;
   }
 `
 
@@ -74,16 +87,11 @@ export const ValuesBox = styled.div`
   @media (max-width: 768px) {
     justify-content: center;
     margin-bottom: 1rem;
-  flex-wrap: wrap;
-
+    flex-wrap: wrap;
   }
-
 `
 
 export const TextDiv = styled.div`
   display: flex;
   flex-direction: column;
 `
-
-
-

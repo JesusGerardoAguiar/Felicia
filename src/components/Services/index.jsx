@@ -1,5 +1,5 @@
 import React from "react"
-import { MainDiv, ValuesDiv, ValuesBox, TextDiv } from "./styles"
+import { MainDiv, ValuesDiv, ValuesBox, TextDiv, TextCon } from "./styles"
 import Medico from "../../../content/assets/icons/medico.svg"
 import Manito from "../../../content/assets/icons/manito.svg"
 import PersonaCerebro from "../../../content/assets/icons/personacerebro.svg"
@@ -13,14 +13,7 @@ const Values = () => {
         <ValuesBox>
           <img src={PersonaCerebro} style={{ width: "7rem" }} />
           <TextDiv>
-            <div
-              style={{
-                display: "flex",
-                width: "40rem",
-                flexDirection: "row",
-                justifyContent: "center",
-              }}
-            >
+            <TextCon>
               <p>
                 -Estadías permanentes, diurnas y temporales (post-operatorios,
                 rehabilitación, convalecencia, vacaciones).
@@ -64,20 +57,14 @@ const Values = () => {
                 <br />
                 -Talleres, charlas y eventos integrando usuarios y comunidad.
               </p>
-            </div>
+            </TextCon>
           </TextDiv>
         </ValuesBox>
         <ValuesBox>
           <img src={Manito} style={{ width: "7rem" }} />
           <TextDiv>
             <h3>Adicionales</h3>
-            <div
-              style={{
-                display: "flex",
-                width: "40rem",
-                flexDirection: "row",
-              }}
-            >
+            <TextCon style={{ justifyContent: "flex-start" }}>
               <p>
                 -Traslados.
                 <br />
@@ -86,7 +73,7 @@ const Values = () => {
                 -Pañales.
                 <br />
               </p>
-            </div>
+            </TextCon>
           </TextDiv>
         </ValuesBox>
       </ValuesDiv>
