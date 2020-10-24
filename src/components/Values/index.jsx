@@ -25,7 +25,7 @@ const Values = () => {
             </ValuesBox>
             <ValuesBox>
               <img src={Abuelos} style={{ width: '7rem' }} />
-              <h3>Inclusión Social</h3>
+              <h3>Inclusión</h3>
             </ValuesBox>
           </ValuesDiv>
         </MainDiv>

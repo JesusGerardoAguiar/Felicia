@@ -26,11 +26,15 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
+
+
+
 const arrayTexts = [
-  "Un lugar de convivencia para adultos mayores, amparados en un agradable ambiente, buscando cambiar su rol en la sociedad.",
-  "Nuestra inspiración es dignificar la vida, teniendo como objetivo cuidar a nuestras personas usuarias y apoyar a sus familias para que se sientan queridos, valorados, respetados e integrados.",
-  "Brindamos un espacio de puertas abiertas, favoreciendo la inclusión social. Somos un equipo de trabajo con las capacidades humanas y técnicas necesarias para asegurar la excelencia.",
-  "Nuestras opciones de servicios adecuadas a cada persona y sus necesidades aseguran una experiencia única y plena.",
+  "Felicia nace como un sueño: revalorizar y jerarquizar el rol y los derechos de los adultos mayores en nuestra sociedad.",
+  "No son solo pasibles de cuidados, son personas que sienten, sueñan, tienen historias, proyectos, angustias.",
+  "El proyecto de Felicia es darles un espacio de soporte y las herramientas para que sean protagonistas de sus propias vidas.",
+  "Somos un gran equipo con las capacidades técnicas y humanas para hacer de este sueño una realidad.",
+  "Nuestros servicios incluyen estadías permanentes, temporales, diurnas y participación de actividades puntuales. También acogemos y estimulamos proyectos comunitarios que apunten a la inclusión.",
 ]
 
 const arrayListFacilities = [
@@ -41,7 +45,7 @@ const arrayListFacilities = [
   "Biblioteca y sala de juegos.",
   "Parque, terraza y parrillero.",
   "Sala de cine.",
-  "Entorno natural, tranquilo y privado.",
+ 
   "Espacios de circulación interior/ exterior amplios seguros y accesibles."
 
 ]
@@ -83,14 +87,14 @@ class Blog extends React.Component {
         <div id="Services">
           <Services />
         </div>
-        <div id="Stay">
+        {/* <div id="Stay">
         <TextContainer
             img={ImagenesRedondas5}
             title={"Estadias"}
             list={arrayListStay}
             texts={["Al ingreso, nuestro equipo médico efectúa una entrevista donde se relevan las necesidades y preferencias del futuro residente, para determinar su perfil particular. En base a dicho perfil, se diseña una experiencia única y personalizada que combina el tipo de estadía con los servicios ofrecidos por nuestra residencia."]}
           />
-        </div>
+        </div> */}
       </Layout>
     )
   }
